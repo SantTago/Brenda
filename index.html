@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Estudo - Comissário(a) de Voo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce7f3; /* Rosa claro para o corpo */
+        }
+        .container {
+            max-width: 800px;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .task-list li {
+            padding: 12px;
+            background-color: #fff1f2; /* Rosa mais claro para os itens */
+            border-radius: 8px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .task-list li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 6px;
+            background-color: #fbcfe8; /* Rosa médio para o checkbox */
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            transition: background-color 0.2s ease-in-out;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        .checkbox-container input[type="checkbox"]:checked {
+            background-color: #db2777; /* Rosa escuro quando marcado */
+        }
+        .checkbox-container input[type="checkbox"]:checked::after {
+            content: '✔';
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+        }
+        .task-content {
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+        .task-content p, .task-content ul {
+            margin-bottom: 12px;
+        }
+        .task-content ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .task-content ul li {
+            margin-bottom: 4px;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+            display: list-item;
+        }
+        @keyframes slide-text {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .sliding-banner {
+            white-space: nowrap;
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #be123c;
+            animation: slide-text 15s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-pink-100 text-slate-800">
+    <div class="py-4 bg-pink-300 shadow-md mb-8 overflow-hidden">
+        <div class="sliding-banner">Bons Estudos Brenda ❤️❤️❤️❤️❤️❤️❤️❤️❤️</div>
+    </div>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-8 bg-pink-50 p-6 rounded-lg shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold text-pink-800">Plano de Estudo – Comissário(a) de Voo</h1>
+            <p class="text-lg text-pink-600 mt-2">Um guia passo a passo para sua aprovação!</p>
+        </header>
+
+        <!-- SEMANA 1 -->
+        <section id="semana1" class="mb-8 p-6 bg-pink-50 rounded-lg shadow-lg">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-pink-700">✅ SEMANA 1 – CONHECIMENTOS BÁSICOS DE AVIAÇÃO</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">📘 Estude:</h3>
+                <ul class="task-list" data-week="1">
+                    <li data-task="1">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w1-t1">
+                        </div>
+                        <label for="w1-t1" class="task-content">
+                            <span class="font-bold">História da aviação no Brasil e no mundo</span>
+                            <p>Comece sua jornada entendendo a base do voo. Estude a história de Santos Dumont e seu 14-Bis, reconhecido como o primeiro voo autônomo. Explore também os Irmãos Wright e a evolução dos aviões. No Brasil, entenda o papel de figuras importantes e o desenvolvimento das primeiras companhias aéreas como a Varig. Compreenda como a aviação deixou de ser uma aventura para se tornar um meio de transporte seguro e eficiente.</p>
+                        </label>
+                    </li>
+                    <li data-task="2">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w1-t2">
+                        </div>
+                        <label for="w1-t2" class="task-content">
+                            <span class="font-bold">Partes da aeronave e suas funções</span>
+                            <p>É fundamental conhecer a anatomia do avião. Estude a função e o nome de cada componente:</p>
+                            <ul>
+                                <li><strong>Fuselagem:</strong> O "corpo" do avião, que abriga a cabine de comando, a cabine de passageiros e o porão de carga.</li>
+                                <li><strong>Asas:</strong> Estruturas responsáveis por gerar a sustentação para o voo. Contêm flaps (aumentam a sustentação) e ailerons (controlam o movimento de rolagem).</li>
+                                <li><strong>Motores:</strong> Responsáveis pela propulsão, podem ser a jato ou a hélice.</li>
+                                <li><strong>Cauda (Empenagem):</strong> Ajuda na estabilidade e controle. É composta pelo estabilizador vertical (leme, que controla o movimento de guinada) e estabilizador horizontal (profundor, que controla o movimento de arfagem).</li>
+                                <li><strong>Trem de pouso:</strong> Sistema usado para decolagem, pouso e movimentação no solo.</li>
+                            </ul>
+                        </label>
+                    </li>
+                    <li data-task="3">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w1-t3">
+                        </div>
+                        <label for="w1-t3" class="task-content">
+                            <span class="font-bold">Órgãos reguladores: ANAC, ICAO, IATA</span>
+                            <p>Essas organizações são a base da regulamentação. Entenda o papel de cada uma:</p>
+                            <ul>
+                                <li><strong>ANAC (Agência Nacional de Aviação Civil):</strong> O órgão regulador no Brasil. Garante a segurança, certifica aeronaves e profissionais, e fiscaliza as operações e aeroportos.</li>
+                                <li><strong>ICAO (Organização da Aviação Civil Internacional):</strong> Estabelece os padrões e recomendações globais para a aviação, garantindo que as regras de um país sejam compatíveis com as de outros.</li>
+                                <li><strong>IATA (Associação Internacional de Transporte Aéreo):</strong> Representa e promove a cooperação entre as companhias aéreas, definindo padrões de segurança e eficiência comercial.</li>
+                            </ul>
+                        </label>
+                    </li>
+                    <li data-task="4">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w1-t4">
+                        </div>
+                        <label for="w1-t4" class="task-content">
+                            <span class="font-bold">Tipos de voos: doméstico e internacional</span>
+                            <p>Aprenda as diferenças operacionais e de documentação. Voos domésticos ocorrem dentro de um mesmo país e têm procedimentos mais simples. Voos internacionais cruzam fronteiras e exigem documentação específica (passaporte, visto) e um conhecimento aprofundado das regulamentações de cada nação.</p>
+                        </label>
+                    </li>
+                    <li data-task="5">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w1-t5">
+                        </div>
+                        <label for="w1-t5" class="task-content">
+                            <span class="font-bold">Funções e responsabilidades do comissário(a)</span>
+                            <p>Sua principal função é a segurança e o conforto dos passageiros. Suas responsabilidades incluem:</p>
+                            <ul>
+                                <li><strong>Segurança:</strong> Verificação de equipamentos de segurança (extintores, máscaras de oxigênio), demonstração de segurança, e gerenciamento de situações de emergência.</li>
+                                <li><strong>Atendimento ao passageiro:</strong> Serviço de bordo, atendimento a passageiros com necessidades especiais, e resolução de conflitos a bordo.</li>
+                                <li><strong>Comunicação:</strong> Manter a comunicação clara com a cabine de comando e a equipe de solo.</li>
+                            </ul>
+                        </label>
+                    </li>
+                    <li data-task="6">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w1-t6">
+                        </div>
+                        <label for="w1-t6" class="task-content">
+                            <span class="font-bold">Noções básicas de meteorologia</span>
+                            <p>Entenda como o clima afeta o voo. Estude conceitos como:</p>
+                            <ul>
+                                <li><strong>Turbulência:</strong> Causada por ventos irregulares e massas de ar. É normal e a tripulação está treinada para lidar com ela.</li>
+                                <li><strong>Nuvens de tempestade (Cumulonimbus):</strong> Representam perigo e devem ser evitadas.</li>
+                                <li><strong>Ventos de proa e de cauda:</strong> Afetam a velocidade e o consumo de combustível da aeronave.</li>
+                                <li><strong>Visibilidade:</strong> É um fator crucial para pousos e decolagens.</li>
+                            </ul>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">📝 Exercício:</h3>
+                <ul class="task-list">
+                    <li data-task="7">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w1-t7">
+                        </div>
+                        <label for="w1-t7" class="task-content">Crie um glossário com 25 siglas ou termos técnicos da aviação. Pesquise e anote o significado de cada um. Inclua termos como: ETA, ETD, PNR, Pax, Crew, Galley, Jumpseat, Briefing.</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEMANA 2 -->
+        <section id="semana2" class="mb-8 p-6 bg-pink-50 rounded-lg shadow-lg">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-pink-700">✅ SEMANA 2 – REGULAMENTAÇÃO DA AVIAÇÃO CIVIL</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">📘 Estude:</h3>
+                <ul class="task-list" data-week="2">
+                    <li data-task="8">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w2-t1">
+                        </div>
+                        <label for="w2-t1" class="task-content">
+                            <span class="font-bold">Código Brasileiro de Aeronáutica (CBA)</span>
+                            <p>O CBA é a lei máxima da aviação no Brasil. Ele estabelece as regras e princípios gerais sobre o uso do espaço aéreo, a exploração de serviços aéreos e os direitos e deveres dos passageiros e da tripulação. É o documento mais importante que rege as operações no país.</p>
+                        </label>
+                    </li>
+                    <li data-task="9">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w2-t2">
+                        </div>
+                        <label for="w2-t2" class="task-content">
+                            <span class="font-bold">RBAC 61 e 121 (Regulamentos da ANAC)</span>
+                            <p>Estes são regulamentos específicos da ANAC que você precisa dominar:</p>
+                            <ul>
+                                <li><strong>RBAC 61:</strong> Lida com a concessão, validade e revalidação de licenças, habilitações e certificados para tripulantes (incluindo comissários).</li>
+                                <li><strong>RBAC 121:</strong> Governa as operações de empresas aéreas, desde a manutenção da aeronave até os procedimentos de segurança, carga e os requisitos de tripulação mínima para cada voo.</li>
+                            </ul>
+                        </label>
+                    </li>
+                    <li data-task="10">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w2-t3">
+                        </div>
+                        <label for="w2-t3" class="task-content">
+                            <span class="font-bold">Documentos obrigatórios de voo (tripulação e aeronave)</span>
+                            <p>Aprenda a identificar e verificar os documentos necessários. Para a tripulação, inclui a licença, o Certificado Médico Aeronáutico (CMA) e o passaporte (em voos internacionais). Para a aeronave, o Certificado de Aeronavegabilidade, o Manual de Voo e o Diário de Bordo são essenciais.</p>
+                        </label>
+                    </li>
+                    <li data-task="11">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w2-t4">
+                        </div>
+                        <label for="w2-t4" class="task-content">
+                            <span class="font-bold">Direitos e deveres dos tripulantes</span>
+                            <p>Conheça suas obrigações e seus direitos trabalhistas. Isso inclui a jornada de trabalho, os períodos de descanso obrigatórios, folgas, além de deveres como cumprir as normas de segurança, zelar pela disciplina a bordo, e garantir o conforto e bem-estar dos passageiros.</p>
+                        </label>
+                    </li>
+                    <li data-task="12">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w2-t5">
+                        </div>
+                        <label for="w2-t5" class="task-content">
+                            <span class="font-bold">Normas da ICAO (Organização da Aviação Civil Internacional)</span>
+                            <p>A ICAO estabelece padrões globais para a segurança e eficiência da aviação. Entenda como as normas de segurança, comunicação e navegação da ICAO afetam sua rotina de trabalho em voos internacionais, garantindo que as operações sejam harmonizadas em todo o mundo.</p>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">📝 Exercício:</h3>
+                <ul class="task-list">
+                    <li data-task="13">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w2-t6">
+                        </div>
+                        <label for="w2-t6" class="task-content">Monte um resumo detalhado com os principais direitos e deveres de um comissário(a) de acordo com o RBAC e o CBA. Inclua pontos sobre limites de jornada, repouso e as responsabilidades em caso de emergência.</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEMANA 3 -->
+        <section id="semana3" class="mb-8 p-6 bg-pink-50 rounded-lg shadow-lg">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-pink-700">✅ SEMANA 3 – SEGURANÇA DE VOO E EMERGÊNCIAS</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">📘 Estude:</h3>
+                <ul class="task-list" data-week="3">
+                    <li data-task="14">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w3-t1">
+                        </div>
+                        <label for="w3-t1" class="task-content">
+                            <span class="font-bold">Tipos de emergência (fogo, despressurização, pouso forçado, evacuação)</span>
+                            <p>Aprenda a identificar e agir em cada tipo de situação de risco. Para cada uma, existe um protocolo específico a ser seguido. Estude os diferentes tipos de fogo (líquidos inflamáveis, elétrico, etc.) e as técnicas de combate. Compreenda os riscos da despressurização e a importância das máscaras de oxigênio. Domine os procedimentos para pousos de emergência em terra e na água.</p>
+                        </label>
+                    </li>
+                    <li data-task="15">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w3-t2">
+                        </div>
+                        <label for="w3-t2" class="task-content">
+                            <span class="font-bold">Equipamentos de segurança da aeronave</span>
+                            <p>Estude a localização e o uso de todos os equipamentos de emergência:</p>
+                            <ul>
+                                <li><strong>Máscaras de oxigênio:</strong> Essenciais em casos de despressurização.</li>
+                                <li><strong>Extintores:</strong> Para combate a incêndios a bordo (com tipos específicos para cada classe de fogo).</li>
+                                <li><strong>Escorregadores de emergência:</strong> Para evacuação rápida.</li>
+                                <li><strong>Coletes salva-vidas:</strong> Usados em emergências sobre a água.</li>
+                                <li><strong>Outros:</strong> Lanterna de emergência, megafone e cordas de salvamento.</li>
+                            </ul>
+                        </label>
+                    </li>
+                    <li data-task="16">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w3-t3">
+                        </div>
+                        <label for="w3-t3" class="task-content">
+                            <span class="font-bold">Procedimentos de evacuação</span>
+                            <p>Domine os comandos e a sequência de ações para evacuar a aeronave. Em uma emergência, a rapidez e a clareza da sua comunicação são vitais para a vida dos passageiros. Saiba como abrir as portas de emergência, inflar os escorregadores e dar comandos firmes e claros como "EVACUAR, EVACUAR, EVACUAR!".</p>
+                        </label>
+                    </li>
+                    <li data-task="17">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w3-t4">
+                        </div>
+                        <label for="w3-t4" class="task-content">
+                            <span class="font-bold">Comunicação com a cabine</span>
+                            <p>Aprenda a terminologia e os procedimentos de comunicação padrão com os pilotos. Essa comunicação é crucial para relatar emergências, informar sobre o estado da cabine de passageiros e garantir uma resposta coordenada e segura em qualquer situação.</p>
+                        </label>
+                    </li>
+                    <li data-task="18">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w3-t5">
+                        </div>
+                        <label for="w3-t5" class="task-content">
+                            <span class="font-bold">Checklist de segurança</span>
+                            <p>O checklist é uma ferramenta fundamental. Estude todos os itens que devem ser verificados antes de cada voo para garantir que a cabine e os equipamentos estejam em perfeitas condições de operação. Isso inclui a verificação dos assentos, cintos de segurança, bagagem e equipamentos de emergência.</p>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">📝 Exercício:</h3>
+                <ul class="task-list">
+                    <li data-task="19">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w3-t6">
+                        </div>
+                        <label for="w3-t6" class="task-content">Simule (no papel) uma evacuação de emergência. Escreva os comandos que você daria aos passageiros e, em seguida, desenhe um mapa da cabine de um avião indicando a localização de todos os equipamentos de emergência.</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEMANA 4 -->
+        <section id="semana4" class="mb-8 p-6 bg-pink-50 rounded-lg shadow-lg">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-pink-700">✅ SEMANA 4 – PRIMEIROS SOCORROS E SOBREVIVÊNCIA</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">📘 Estude:</h3>
+                <ul class="task-list" data-week="4">
+                    <li data-task="20">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w4-t1">
+                        </div>
+                        <label for="w4-t1" class="task-content">
+                            <span class="font-bold">Noções de primeiros socorros</span>
+                            <p>Aprenda a lidar com situações médicas comuns. Estude como estancar uma hemorragia, imobilizar uma fratura e, principalmente, como realizar uma reanimação cardiopulmonar (RCP) em caso de parada cardíaca. Além disso, aprenda a identificar e agir em casos de síncope (desmaio), crises convulsivas e hipoglicemia (baixa de açúcar no sangue).</p>
+                        </label>
+                    </li>
+                    <li data-task="21">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w4-t2">
+                        </div>
+                        <label for="w4-t2" class="task-content">
+                            <span class="font-bold">Atendimento a passageiros com doenças a bordo</span>
+                            <p>Prepare-se para lidar com passageiros que têm mal-estar, crises de asma, reações alérgicas ou outras condições médicas. Mantenha a calma, use a comunicação assertiva e siga os protocolos para garantir a segurança do passageiro. Aprenda a usar a mala de primeiros socorros e o desfibrilador (DEA).</p>
+                        </label>
+                    </li>
+                    <li data-task="22">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w4-t3">
+                        </div>
+                        <label for="w4-t3" class="task-content">
+                            <span class="font-bold">Equipamentos médicos de bordo</span>
+                            <p>Familiarize-se com o conteúdo e a localização do kit de primeiros socorros. Saiba quando e como usar o desfibrilador automático externo (DEA) em uma emergência de parada cardíaca, seguindo os passos de aplicação das pás e choque.</p>
+                        </label>
+                    </li>
+                    <li data-task="23">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w4-t4">
+                        </div>
+                        <label for="w4-t4" class="task-content">
+                            <span class="font-bold">Técnicas de sobrevivência (selva, mar, montanha, deserto)</span>
+                            <p>Em caso de pouso de emergência em áreas remotas, é vital ter conhecimentos básicos de sobrevivência. Estude como:</p>
+                            <ul>
+                                <li><strong>Selva:</strong> Construir um abrigo, encontrar água potável, identificar plantas comestíveis e sinalizar para resgate.</li>
+                                <li><strong>Mar:</strong> Usar o bote salva-vidas, racionar água e comida, e criar sinais visuais para aeronaves de busca e salvamento.</li>
+                                <li><strong>Montanha/Deserto:</strong> Proteger-se do frio ou do calor extremo, encontrar fontes de calor e água e criar abrigos temporários.</li>
+                            </ul>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">📝 Exercício:</h3>
+                <ul class="task-list">
+                    <li data-task="24">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="w4-t5">
+                        </div>
+                        <label for="w4-t5" class="task-content">Crie um “kit de primeiros socorros” ideal para um voo. Liste os itens e a justificativa para a inclusão de cada um. Pense em cenários como desmaio, corte e reações alérgicas.</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- DICAS EXTRAS -->
+        <section class="mb-8 p-6 bg-pink-50 rounded-lg shadow-lg">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-pink-700">✨ DICAS EXTRAS:</h2>
+            <ul class="task-list">
+                <li>
+                    <p class="task-content">Assista a vídeos no YouTube com simulações de comissários em treinamento. Eles são ótimos para visualizar os procedimentos de segurança na prática.</p>
+                </li>
+                <li>
+                    <p class="task-content">Baixe o app da ANAC ou acesse o site para conteúdos atualizados sobre a regulamentação da aviação civil brasileira.</p>
+                </li>
+                <li>
+                    <p class="task-content">Se puder, comece a estudar inglês técnico para aviação (é muito valorizado no mercado).</p>
+                </li>
+            </ul>
+        </section>
+
+        <div class="text-center">
+            <button id="resetButton" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-full transition-colors">
+                Redefinir Progresso
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Referências aos elementos
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const resetButton = document.getElementById('resetButton');
+            const storageKey = 'planoEstudoComissario';
+
+            // Função para carregar o progresso do Local Storage
+            const loadProgress = () => {
+                const savedProgress = localStorage.getItem(storageKey);
+                if (savedProgress) {
+                    const progress = JSON.parse(savedProgress);
+                    checkboxes.forEach(checkbox => {
+                        const id = checkbox.id;
+                        if (progress[id]) {
+                            checkbox.checked = true;
+                        }
+                    });
+                }
+            };
+
+            // Função para salvar o progresso no Local Storage
+            const saveProgress = () => {
+                const progress = {};
+                checkboxes.forEach(checkbox => {
+                    progress[checkbox.id] = checkbox.checked;
+                });
+                localStorage.setItem(storageKey, JSON.stringify(progress));
+            };
+
+            // Adiciona event listener para cada checkbox
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', saveProgress);
+            });
+
+            // Adiciona event listener ao botão de redefinir
+            resetButton.addEventListener('click', () => {
+                // Remove o item do Local Storage
+                localStorage.removeItem(storageKey);
+                // Desmarca todas as caixas de seleção
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+            });
+
+            // Carrega o progresso ao iniciar a página
+            loadProgress();
+        });
+    </script>
+
+</body>
+</html>
